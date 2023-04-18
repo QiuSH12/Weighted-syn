@@ -11,6 +11,8 @@ The network used in this work is based on a 2D U-net architecture:
 
 The input data is the standardized spatial factor (5-channel), and the target images include T1 MPRAGE, T1 GRE, and T2 FLAIR. The loss function is a combination of L1 loss and SSIM loss.
 
+The implementation is based on TensorFlow 2.6.0 and Python 3.8.0.
+
 ## Further reading
 **About MR Multitasking:**
 * Christodoulou AG, Shaw JL, Nguyen C, et al. Magnetic resonance multitasking for motion-resolved quantitative cardiovascular imaging. _Nat Biomed Eng_. 2018;2(4):215-226. https://doi.org/10.1038/s41551-018-0217-y
