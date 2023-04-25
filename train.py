@@ -88,6 +88,7 @@ def train_1cvgroup(data_folder,train_id, test_id, checkpoint_path):
         X_train = np.append(X_train,input_img,0)
         
         output_img = np.array([T1mprage,T1gre,T2flair])
+        #output_img = np.reshape(T1mprage,(1,IMG_SIZE,IMG_SIZE,-1))
         output_img = np.swapaxes(output_img,0,3)
         Y_train = np.append(Y_train,output_img,0)
         
@@ -121,6 +122,7 @@ def train_1cvgroup(data_folder,train_id, test_id, checkpoint_path):
         X_test = np.append(X_test,input_img,0)
         
         output_img = np.array([T1mprage,T1gre,T2flair])
+        #output_img = np.reshape(T1mprage,(1,IMG_SIZE,IMG_SIZE,-1))
         output_img = np.swapaxes(output_img,0,3)
         Y_test = np.append(Y_test,output_img,0)
         
@@ -185,9 +187,9 @@ def train_1cvgroup(data_folder,train_id, test_id, checkpoint_path):
 
 
 # ======= main ========
-data_folder = "data_folder"
-train_id = np.array(['MS_2','MS_8','MS_14','MS_3','MS_9','MS_15','MS_4','MS_10','H_1','MS_5','MS_11','H_2','MS_6','MS_12','H_3'])
-test_id = np.array(['MS_1','MS_7','MS_13'])
+data_folder = "data"
+train_id = np.array(['MS_1','MS_7','MS_13','MS_2','MS_8','MS_14','MS_3','MS_9','MS_15','MS_4','MS_10','H_1','MS_5','MS_11','H_2'])
+test_id = np.array(['MS_6','MS_12','H_3'])
 
 checkpoint_path = "checkpoint/cp-{epoch:04d}.ckpt"
 

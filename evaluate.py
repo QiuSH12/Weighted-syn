@@ -14,6 +14,7 @@ import nibabel as nib
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import io
+import datetime
 from skimage.metrics import normalized_root_mse, peak_signal_noise_ratio, structural_similarity
 
 
@@ -82,6 +83,7 @@ def eval_1cvgroup(test_folder,test_id, checkpoint_path, result_path):
 
     # ----------- make predictions -----------
     test_output = model.predict(test_ds)
+    test_output = test_output*np.tile(np.expand_dims(mask_test,3),(1,1,1,OUT_CHANNEL))
 
     # ----------- save network output as nii ----------- 
     affine = np.array([[1, 0, 0, 1],
@@ -121,10 +123,10 @@ def eval_1cvgroup(test_folder,test_id, checkpoint_path, result_path):
 
 
 # ======= main ========
-test_folder = "data_folder"
-test_id = np.array(['MS_1','MS_7','MS_13'])
+test_folder = "data"
+test_id = np.array(['MS_6','MS_12','H_3'])
 checkpoint_path = "checkpoint/cp-0500.ckpt"
-result_path = "results/output_cv1.nii"
+result_path = "results/output.nii"
 [nrmse_val,psnr_val,ssim_val,nrmse_bmask_val,psnr_bmask_val,ssim_bmask_val] = eval_1cvgroup(test_folder,test_id, checkpoint_path, result_path)
 print("evaluation completed")
 
