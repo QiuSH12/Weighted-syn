@@ -32,4 +32,5 @@ Eighteen subjects (fifteen diagnosed or suspected MS patients, three healthy vol
 **A previous work estimating T1 and T2 maps from conventional weighted images using the same DL architecture:**
 * Qiu S, Chen Y, Ma S, et al. Multiparametric mapping in the brain from conventional contrast-weighted images using deep learning. _Magn Reson Med_. 2021.  https://doi.org/10.1002/mrm.28962
 
-
+## Contact info
+Shihan Qiu, qiushihan19@gmail.com
