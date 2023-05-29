@@ -1,5 +1,5 @@
 # Weighted-MRI synthesis from MR Mulitasking spatial factors
-This repository includes the source code (deep learning part) for the paper: _**Direct Synthesis of Multi-Contrast Brain MR Images from MR Multitasking Spatial Factors Using Deep Learning**_.
+This repository includes the source code (deep learning part) for the paper: _**Direct Synthesis of Multi-Contrast Brain MR Images from MR Multitasking Spatial Factors Using Deep Learning**_. https://doi.org/10.1002/mrm.29715
 
 In this work, a deep learning approach was developed to synthesize conventional contrast-weighted images in the brain from MR Multitasking spatial factors.
 
